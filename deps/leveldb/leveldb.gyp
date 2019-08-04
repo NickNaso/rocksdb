@@ -121,7 +121,9 @@
             ]
           , 'cflags': [
                 '-Wno-sign-compare'
-            ]
+            ]   
+	  , 'cflags!': [ '-fno-exceptions' ]
+          , 'cflags_cc!': [ '-fno-exceptions' ] 
         }]
       , ['OS == "openbsd"', {
             'defines': [
