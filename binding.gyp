@@ -50,6 +50,10 @@
             , 'cflags!': [ '-fno-tree-vrp', '-fno-exceptions' ]
             , 'cflags_cc!': [ '-fno-exceptions' ]
           }]
+        , ['OS == "freebsd"', {
+            , 'cflags!': [ '-fno-exceptions' ]
+            , 'cflags_cc!': [ '-fno-exceptions' ]
+          }]
         ]
       , "dependencies": [
             "<(module_root_dir)/deps/leveldb/leveldb.gyp:leveldb"
